@@ -15,11 +15,11 @@ function App() {
     setTimeout(() => {
       const bgLoader = document.getElementById('bg-loader');
       bgLoader.classList.add('close');
-      }, 12000);
+      }, 8000);
     setTimeout(() => {
       const lina = document.getElementById('logo-lina');
       lina.classList.add('close');
-      }, 8500);
+      }, 3500);
     return () => clearTimeout();
   });
     

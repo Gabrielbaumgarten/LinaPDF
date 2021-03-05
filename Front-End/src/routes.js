@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import MainPage from'./Paginas/Home/index.js'
+import HomePage from'./Paginas/Home/index.js'
 import JuntarPDFPage from './Paginas/JuntarPDF/index.js'
 import ComprimirPDFPage from './Paginas/ComprimirPDF/index.js';
 import PesquisarPDFPage from './Paginas/PesquisarPDF/index.js';
@@ -15,7 +15,7 @@ import DividirPDFPage from './Paginas/DividirPDF/index.js';
 const Routes = () => (
   <BrowserRouter>
     <Switch>
-      <Route exact path='/' component = {MainPage} />
+      <Route exact path='/' component = {HomePage} />
       <Route exact path='/JuntarPDF' component = {JuntarPDFPage} />
       <Route exact path='/ComprimirPDF' component = {ComprimirPDFPage} />
       <Route exact path='/PesquisarPDF' component = {PesquisarPDFPage} />

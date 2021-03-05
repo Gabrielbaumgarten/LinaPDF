@@ -19,7 +19,7 @@ body {
   top: 0;
   left: 0;
 
-  animation: hide-bg 2s ease 10s forwards;
+  animation: hide-bg 2s ease 5s forwards;
 }
 
 .bg-loader.close,
@@ -50,7 +50,7 @@ body {
 .bg-loader .dot{
   position: absolute;
   top: 0;
-  left: 14.4rem;
+  left: 138px;
 }
 
 .bg-loader .dot .lina-dot{
