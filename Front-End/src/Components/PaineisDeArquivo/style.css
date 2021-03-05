@@ -1,0 +1,37 @@
+.Panes {
+    width: calc(100% - 22vw);
+    height: calc(100vh - 8rem) !important;
+
+    display: flex;
+    align-items: center;
+
+    overflow-x: scroll;
+
+    
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out .5s forwards;
+  }
+  
+.Pane{
+    width:235px !important;
+    height: 350px;
+    opacity: 0.6;
+
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+  
+.Paper{
+    width:235px;
+    height: 350px;
+    opacity: 0.6;
+    padding: 5%;
+}
+  
+.Paper:hover{
+    opacity: 1.0;
+}
+  
+.IconDelete {
+  float: right;
+}

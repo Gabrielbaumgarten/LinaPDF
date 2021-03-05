@@ -1,0 +1,32 @@
+.float-button-add {
+    background-color: var(--light-red) !important;
+    color: var(--white) !important;
+
+    transition: 1.5s !important;
+    
+  opacity: 0;
+  animation: show-menu-item 2s ease-in-out 1.5s forwards;
+  }
+  
+.float-button-add:hover{
+    background-color: var(--dark-red) !important;
+    color: var(--light-white) !important;
+  }
+  
+.IconAdd {
+    padding-top: 7px;
+}
+
+input{
+  display: none;
+}
+
+
+@keyframes show-menu-item{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}

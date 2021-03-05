@@ -1,0 +1,126 @@
+body {
+  background-color: #f3f0ec;
+  height: 100vh;
+  width: 100vw;
+}
+
+.bg-loader{
+  width: 100vw;
+  height: 100vh;
+
+  background: linear-gradient(225deg, var(--light-red)0%, var(--red)100%);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  animation: hide-bg 2s ease 10s forwards;
+}
+
+.bg-loader.close,
+.bg-loader.close .logo-lina,
+.bg-loader.close .dot {
+  display: none;
+}
+
+.bg-loader .logo-lina{
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.bg-loader .lina{
+  fill: transparent;
+  animation: show 10s ease forwards;
+}
+
+.bg-loader .logo-lina.close{
+  animation: hide-lina 2s ease-in forwards;
+}
+
+.bg-loader .lina-without-fill{
+  animation: show-without-fill 10s ease forwards;
+}
+
+.bg-loader .dot{
+  position: absolute;
+  top: 0;
+  left: 14.4rem;
+}
+
+.bg-loader .dot .lina-dot{
+  fill: transparent;
+  animation: show-dot 10s ease forwards;
+}
+
+@keyframes show{
+  0%{
+      stroke-width: 0;
+      stroke-dasharray: 1,100;
+      fill: transparent;
+  }
+  25%{
+      stroke-width: 1;
+      stroke-dasharray: 100,0;
+      fill: transparent;
+  }
+  60%,100%{
+      stroke-width: .3;
+      fill: var(--blue);
+  }
+}
+@keyframes show-without-fill{
+  0%{
+      stroke-width: 0;
+      stroke-dasharray: 1,100;
+      fill: transparent;
+  }
+  25%{
+      stroke-width: 1;
+      stroke-dasharray: 100,0;
+      fill: transparent;
+  }
+  60%,100%{
+      stroke-width: .3;
+  }
+}
+
+@keyframes show-dot{
+  0%{
+      stroke-width: 0;
+      stroke-dasharray: 1,100;
+      fill: transparent;
+  }
+  25%{
+      stroke-width: 1;
+      stroke-dasharray: 100,0;
+      fill: transparent;
+  }
+  60%,100%{
+      stroke-width: .3;
+      fill: var(--pink);
+  }
+}
+
+@keyframes hide-bg{
+  0%{
+    width: 100vw;
+  }
+  100%{
+    width: 0;
+  }
+}
+
+@keyframes hide-lina{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}

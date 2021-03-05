@@ -1,0 +1,309 @@
+
+.pageContainer-stage-01, .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    margin-top: 3rem;
+
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out .5s forwards;
+}
+  
+.pageContainer-stage-01 .title h1{
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: var(--dark-red);
+}
+  
+.pageContainer-stage-01 .title p{
+    width: 50rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+  
+.pageContainer-stage-01 .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 30rem;
+    height: 4.5rem;
+  
+    margin-top: 2rem;
+  
+    border-radius: 46px;
+  
+    background-color: var(--light-red);
+    cursor: pointer;
+  
+    transition: .7s ease;
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1s forwards;
+}
+  
+.pageContainer-stage-01 .button:hover{
+    width: 30.5rem;
+    height: 4.7rem;
+    background: var(--dark-red);
+    
+}
+  
+.pageContainer-stage-01 .button label{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.5rem;
+  
+    color: var(--white);
+}
+  
+.pageContainer-stage-01 .button:hover label{
+    color: var(--light-white);
+}
+  
+.pageContainer-stage-01 .button input{
+    display: none;
+}
+
+.pageContainer-stage-02{
+    display: flex;
+    align-items: center;
+    position: relative;
+  
+    width: 100vw;
+    height: calc(100vh - 8rem);
+}
+  
+.pageContainer-stage-02 .float-button-split{
+    position: absolute;
+    right: 40vw;
+}
+
+.drawer-dividir{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+
+    width: 0vw;
+    height: calc(100vh - 8rem);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: var(--light-white);
+    box-shadow:  -8px 4px 4px rgba(0, 0, 0, 0.25);
+
+    overflow:hidden;
+
+    
+    animation: show-drawer-split 1s ease-in-out 1s forwards;  
+}
+
+.drawer-dividir h1{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 2rem;
+  
+    color: var(--dark-red);
+  
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+} 
+  
+.drawer-dividir hr{
+    height: 1px;
+    width: 80%;
+    background-color: var(--light-black-low-opacity);
+    border: none;
+    margin-top: 0;
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+}
+ 
+.drawer-dividir .box{
+    margin: 1rem;
+    padding: 0.5rem;
+    color: var(--dark-blue);
+    text-align: justify;
+    background-color: var(--light-blue);
+    border-radius: 0.7rem;
+    max-width: 100%;
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+}
+
+.drawer-dividir .box p{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-align: justify ;
+  
+    margin: 1rem;
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+}
+
+.drawer-dividir h2{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-align: justify ;
+    
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+}
+
+.drawer-dividir h3{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: justify ;
+
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+}
+
+.drawer-dividir .interval{
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+}
+
+.drawer-dividir .interval .intervalInput{
+    width: 10rem;
+    height: 4rem;
+
+    padding-left: 1rem;
+
+    border:1px solid;
+    border-radius: 5px;
+    border-color: var(--dark-red);
+}
+
+.drawer-dividir .checkbox span{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.drawer-dividir .slider-dividirPDF {
+    width: 20vw !important;
+    margin-top: 2rem;
+    margin-right: 2rem;
+
+    font-size: 1rem;
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+}
+
+.drawer-dividir .inputSlider{
+    position: absolute !important;
+    height: 4rem;
+
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: var(--dark-red);
+}
+
+.drawer-dividir .toggleButton{
+    display: flex;
+    justify-content: center;
+    
+    height: 4.5rem;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+}
+
+.drawer-dividir .button{
+    position: absolute;
+    bottom: 1rem;
+  
+    width: 80%;
+    height: 5rem;
+    border-radius: 46px;
+  
+    background: var(--light-red);
+  
+    transition: 1.5s;
+    
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+}
+
+.drawer-dividir .button > h1{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--light-white);
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+}
+  
+.drawer-dividir .button:hover{
+    transform: scale(1.03);
+    background: var(--dark-red);
+}
+
+.drawer-dividir .buttonInativate{
+    position: absolute;
+    bottom: 1rem;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 80%;
+    height: 5rem;
+    border-radius: 46px;
+  
+    cursor: not-allowed;
+    background: var(--light-black-low-opacity);
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+  }
+  
+  .drawer-dividir .buttonInativate > h1{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--white);
+  }
+
+  @keyframes show-menu-item{
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+}
+
+
+  @keyframes show-drawer-split{
+    from{
+      width: 0;
+    }
+    to{
+      width: 35vw;
+    }
+  }

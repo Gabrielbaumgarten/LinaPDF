@@ -1,0 +1,33 @@
+.PaperDividir{
+    width:520px;
+    height: 350px;
+    opacity: 1;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .PaperDividir:hover{
+    opacity: 2.0;
+  }
+  
+  .PaneDividir{
+    width:520px;
+    height: 350px;
+    opacity: 0.6;
+    margin-left: 10vw;
+  }
+  
+  .PanesDividir {
+    margin-top: 100px;
+  }
+
+  .GIF{
+      width: 100px;
+      height: 50px;
+  }
+
+  .InsidePaper{
+    background-color: white;
+    border: 2px solid;
+  }

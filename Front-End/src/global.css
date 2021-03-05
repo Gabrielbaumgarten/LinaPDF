@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    max-width: 100vw;
+    max-height: 100vh ;
+}
+
+:root{
+    font-size: 60%;
+
+    --red: #E5322D;
+    --dark-red: #BF0E0A;
+    --light-red: #FF5E59;
+
+    --black: #181A19;
+    --light-black: #404040 ;
+    --light-black-low-opacity: #40404040 ;
+
+    --white: #E8EDED;
+    --dark-white: #C7C7C7;
+    --light-white: #FFFFFF;
+
+    --light-blue: rgb(186, 226, 231);
+    --blue: #000080;
+    --dark-blue: #555E69;
+
+    --pink: #FB1186;
+}
+
+body{
+    background-color: var(--white);
+    
+    max-width: 100vw;
+    max-height: 100vh ;
+}

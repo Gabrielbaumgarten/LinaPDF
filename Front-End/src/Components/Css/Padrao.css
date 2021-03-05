@@ -1,0 +1,15 @@
+
+.Pdf{
+  height: 252px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.Canvas{
+  height: auto;
+}
+
+.IconUpload{
+  display: flex;
+  align-items: center;
+}
