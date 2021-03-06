@@ -53,3 +53,10 @@ body{
         font-size: 50%;
     }
 }
+
+@media(max-width: 500px){
+    :root{
+        font-size: 60%;
+    }
+}
+

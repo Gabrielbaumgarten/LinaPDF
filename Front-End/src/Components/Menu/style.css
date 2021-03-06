@@ -250,3 +250,10 @@
       transform: scale(1);
     }
 }
+
+@media(max-width:500px){
+  .div-menu-icon{
+      top: 2rem;
+      right: 2rem;
+  }
+}

@@ -51,10 +51,11 @@ function App() {
 
 export default App;
 
-// TODO: Estudar isso
-// Pedir ajuda para ajustar os panes quando eles ultrapassarem a div
-// Verificar a necessidade do adicionar mais arquivos no dividir
-// Ver qual versão do dividir eles preferem
-// deixar as páginas responsívas para celular
-// continuar a repadronização dos das páginas
-// Ajustar os paineis para mobile
+// Principais resoluções
+
+// Notebook Grande: 1920 x 1080
+// Notebook largo: 1366 x 768
+// Notebook: 1280 x 800
+
+// Ipad: 1024 x 768
+// Android: 360 x 760

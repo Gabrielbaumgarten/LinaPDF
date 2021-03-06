@@ -38,6 +38,7 @@ const MainPage = () =>{
         <NavBar/>
       </div>
         <div className="background">
+          <div className="complementBackground"/>
           <img src={BackgroudDecoration} alt="" onLoad='SVGInject(this)'/>
         </div>
 
@@ -53,7 +54,7 @@ const MainPage = () =>{
           <div className='first-line'>
             <Tilt  className='tilt' scale={1.05}>
               
-                <div className="main-button" onClick={() => clickOnButton('link-join')}>
+                <div className="main-button" onClick={() => clickOnButton('link-join')} >
                   <div className='main-text-button'>
                     <img src={IconJoin} alt="Icone Juntar" onLoad='SVGInject(this)'/>
                     <h3>Juntar PDF</h3>
