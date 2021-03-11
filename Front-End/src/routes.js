@@ -6,6 +6,7 @@ import ComprimirPDFPage from './Paginas/ComprimirPDF/index.js';
 import PesquisarPDFPage from './Paginas/PesquisarPDF/index.js';
 import PDFtoJPGPage from './Paginas/PDFtoJPG/index.js';
 import DividirPDFPage from './Paginas/DividirPDF/index.js';
+import PDFtoXLSXPage from './Paginas/PDFtoXLSX/index.js';
 
 /* 
   Aqui são definadas as rotas para as outra páginas junto com suas urls
@@ -21,6 +22,7 @@ const Routes = () => (
       <Route exact path='/PesquisarPDF' component = {PesquisarPDFPage} />
       <Route exact path='/PDFtoJPG' component = {PDFtoJPGPage} />
       <Route exact path='/DividirPDF' component = {DividirPDFPage} />
+      <Route exact path='/PDFtoXLSX' component = {PDFtoXLSXPage} />
     </Switch>
   </BrowserRouter>
 );

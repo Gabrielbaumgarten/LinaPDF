@@ -68,3 +68,9 @@
     opacity: 1;
   }
 }
+
+@media(max-width:500px){
+  .dropzone{
+    display: none;
+  }
+}

@@ -237,3 +237,9 @@
     width: 24vw;
   }
 }
+
+@media(max-width:500px){
+  .pageContainer-stage-01{
+    margin-top: 6rem;
+  }
+}

@@ -13,6 +13,7 @@ from django.core.files.storage import FileSystemStorage
 from .methods.merge import merge
 from .methods.getInformations import getInformations
 from .methods.slipt import IntervalSplit, SizeSplit, SplitAll, SelectSplit
+from .methods.pdftoxml import ExtracTables
 
 
 
@@ -95,6 +96,33 @@ class ComprimirPDF(generics.ListCreateAPIView):
 class PDFtoJPG(generics.ListCreateAPIView):
     queryset = Arquivos.objects.all()
     serializer_class = ArquivosSerializer
+
+class PDFtoXML(generics.ListCreateAPIView):
+    
+    def post(self, request, format=None):
+
+        arquivos = []
+        for index in range(len(request.data)):
+            aux = 'arquivo' + str(index)
+            arquivos.append(request.data.get(aux))
+
+        modoExtracao = request.data.get('tipoExtracao')
+        pagina = int(request.data.get('pages'))
+
+        output = ExtracTables(arquivos, modoExtracao, pagina)
+        fs = FileSystemStorage()
+        # filename = os.path.join(os.path.join(os.path.dirname(os.path.abspath(__package__)), 'documentosDividos'), "document-output.pdf")
+        # path = os.path.abspath(__file__).replace('pdftoxml.py','')
+        path = os.path.abspath(__package__).replace('linaPDF', '')
+        file = 'data1.xlsx'
+        # file = 'document-output.pdf'
+        filename = os.path.join(path, file)
+        
+        if fs.exists(filename):
+            with fs.open(filename) as excel:
+                response = HttpResponse(excel, content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+                response['Content-Disposition'] = 'attachment; filename="mypdf.xlsx"'
+                return response
 
 class PesquisarPDF(generics.ListCreateAPIView):
     queryset = Arquivos.objects.all()

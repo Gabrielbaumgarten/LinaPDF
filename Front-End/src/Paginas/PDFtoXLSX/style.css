@@ -1,0 +1,289 @@
+
+.pageContainer-stage-01, .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    margin-top: 3rem;
+  
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out .5s forwards;
+  }
+  
+  .pageContainer-stage-01 .title h1{
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: var(--dark-red);
+  }
+  
+  .pageContainer-stage-01 .title p{
+    width: 50rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: justify;
+  }
+  
+  .pageContainer-stage-01 .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 30rem;
+    height: 4.5rem;
+  
+    margin-top: 2rem;
+  
+    border-radius: 46px;
+  
+    background-color: var(--light-red);
+    cursor: pointer;
+  
+    transition: .7s ease;
+  
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1s forwards;
+  }
+  
+  .pageContainer-stage-01 .button:hover{
+    width: 30.5rem;
+    height: 4.7rem;
+    background: var(--dark-red);
+    
+  }
+  
+  .pageContainer-stage-01 .button label{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.5rem;
+  
+    color: var(--white);
+  }
+  
+  .pageContainer-stage-01 .button:hover label{
+    color: var(--light-white);
+  }
+  
+  .pageContainer-stage-01 .button input{
+    display: none;
+  }
+  
+  .pageContainer-stage-02{
+    display: flex;
+    align-items: center;
+    position: relative;
+  
+    width: 100vw;
+    height: calc(100vh - 8rem);
+    
+  }
+  
+  .pageContainer-stage-02 .float-button{
+    position: absolute;
+    right: 35vw;
+  }
+  
+  .drawer-PDFtoXLSX{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  
+    width: 0vw;
+    height: calc(100vh - 8rem);
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    background: var(--light-white);
+    box-shadow:  -8px 4px 4px rgba(0, 0, 0, 0.25);
+  
+    animation: show-drawer-join 1s ease-in-out 1s forwards;
+  }
+  
+  .drawer-PDFtoXLSX h1{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 2rem;
+  
+    color: var(--dark-red);
+  
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+  }
+  
+  .drawer-PDFtoXLSX hr{
+    height: 1px;
+    width: 80%;
+    background-color: var(--light-black-low-opacity);
+    border: none;
+    margin-top: 0;
+  
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+  }
+  
+  .drawer-PDFtoXLSX p{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-align: justify ;
+  
+    margin: 1rem;
+    margin-right: 2rem;
+  
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+  }
+
+  .drawer-PDFtoXLSX .pages{
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+.drawer-PDFtoXLSX .pages h2{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1.2rem;
+
+}
+
+.drawer-PDFtoXLSX .pages .intervalInput{
+    width: 10rem;
+    height: 4rem;
+
+    padding-left: 1rem;
+
+    border:1px solid;
+    border-radius: 5px;
+    border-color: var(--dark-red);
+}
+
+.drawer-PDFtoXLSX h2{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-align: left;
+
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+}
+
+.drawer-PDFtoXLSX .toggleButton{
+    display: flex;
+    justify-content: center;
+    
+    height: 4.5rem;
+
+    margin: 2rem;
+    
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+}
+
+.drawer-PDFtoXLSX .box{
+    margin: 2rem;
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+}
+  
+  .drawer-PDFtoXLSX .button{
+    position: absolute;
+    bottom: 1rem;
+  
+    width: 80%;
+    height: 5rem;
+    border-radius: 46px;
+  
+    background: var(--light-red);
+  
+    transition: 1.5s;
+    
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+  }
+  
+  .drawer-PDFtoXLSX .buttonInativate{
+    position: absolute;
+    bottom: 1rem;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 80%;
+    height: 5rem;
+    border-radius: 46px;
+  
+    cursor: not-allowed;
+    background: var(--light-black-low-opacity);
+    
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+  }
+  
+  .drawer-PDFtoXLSX .buttonInativate > h1{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--white);
+    
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+  }
+  
+  .drawer-PDFtoXLSX .button > h1{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--light-white);
+    
+    opacity: 0;
+    animation: show-menu-item 2s ease-in-out 1.5s forwards;
+  }
+  
+  .drawer-PDFtoXLSX .button:hover{
+    transform: scale(1.03);
+    background: var(--dark-red);
+  }
+  
+  .CircularProgress{
+    margin-top: 100px;
+    margin-left: 50%;
+    color: var(--dark-red) !important;
+  }
+  
+  
+  @keyframes show-menu-item{
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  @keyframes show-drawer-join{
+    from{
+      width: 0;
+    }
+    to{
+      width: 30vw;
+    }
+  }
+  
+  @media(max-width:500px){
+    .pageContainer-stage-01{
+      margin-top: 6rem;
+    }
+  }

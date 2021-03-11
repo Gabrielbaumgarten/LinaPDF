@@ -23,6 +23,10 @@ function BuscarURL(action){
         case 'Pesquisar':
             url = 'http://localhost:8000/linaPDF/pesquisarPDF/'
             break;
+
+        case 'PDFtoXLSX':
+            url = 'http://localhost:8000/linaPDF/PDFtoXML/'
+            break;
     
         default:
             break;
@@ -154,4 +158,49 @@ async function postDividirPDF(dados, acao, funcao,  atualizaProgresso, onlyOne, 
     }
 }
 
-export{getDataAxios, postJuntarPDF, postGetInformation, postDividirPDF}
+async function postPDFtoXSLX(arquivos, acao, funcao,tipoExtracao, pagina, atualizaProgresso, ordem, error){
+
+    var url = BuscarURL(acao)
+
+    var data = new FormData()
+    var index = 0
+    ordem.forEach(aux => {
+        data.append('arquivo'+ index, arquivos[aux])
+        index += 1
+    })
+
+    data.append('tipoExtracao', tipoExtracao)
+    data.append('pages', pagina)
+
+    try{
+        const response = await axios.post( url,
+            data, 
+            { 
+                headers: { 'Content-Type': 'multipart/form-data' },
+                onUploadProgress: progressEvent => {
+                    var percent = Math.floor((progressEvent.loaded * 100) / progressEvent.total)
+                    percent -= 50
+                    percent = Math.max(0, percent)
+                    atualizaProgresso(percent);
+                    },
+                onDownloadProgress: progressEvent => {
+                    var percent = Math.floor((progressEvent.loaded * 100) / progressEvent.total)-50
+                    percent = Math.max(0, percent)
+                    atualizaProgresso(50 + percent)
+                },
+                responseType: 'blob',
+            }
+         )
+        
+        if(response.status !== 200){
+            error();
+            console.log("Erro ao tentar juntar dois arquivos!! Verificar o método postJuntarPDF")    
+        }
+        funcao(response.data)
+    } catch(erro){
+        console.log(erro)
+        error();
+    }
+}
+
+export{getDataAxios, postJuntarPDF, postGetInformation, postDividirPDF, postPDFtoXSLX}

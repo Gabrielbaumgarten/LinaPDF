@@ -15,6 +15,7 @@ import IconSplit from '../../assets/icon_arrows-split-2.svg'
 import IconCompress from '../../assets/icon_compress.svg'
 import IconSearch from '../../assets/icon_search.svg'
 import IconPDFtoJPG from '../../assets/PDFtoJPG.svg'
+import IconPDFtoXLSX from '../../assets/icon_PDFtoXLSX.svg'
 
 
 
@@ -97,7 +98,7 @@ const MainPage = () =>{
            <Tilt  className='tilt' scale={1.05}>
                   <div className="main-button" onClick={() => clickOnButton('link-search')}>
                     <div className='main-text-button'>
-                      <img src={IconSearch} alt="Icone Comprimir" onLoad='SVGInject(this)'/>
+                      <img src={IconSearch} alt="Icone Pesquisar no PDF" onLoad='SVGInject(this)'/>
                       <h3>Pesquisar no PDF</h3>
                     </div>
                     <div className='description-button'>
@@ -110,12 +111,23 @@ const MainPage = () =>{
             <Tilt  className='tilt' scale={1.05}>
                 <div className="main-button" onClick={() => clickOnButton('link-PDFtoJPG')}>
                   <div className='main-text-button'>
-                    <img src={IconPDFtoJPG} alt="Icone Comprimir" onLoad='SVGInject(this)'/>
+                    <img src={IconPDFtoJPG} alt="Icone PDF para JPG" onLoad='SVGInject(this)'/>
                     <h3>PDF para JPG</h3>
                   </div>
                   <div className='description-button'>
                     Torne o PDF um arquivo pesquisável para encontrar mais
                     facilmente as palavras chaves.
+                  </div>
+                </div>
+            </Tilt>
+            <Tilt  className='tilt' scale={1.05}>
+                <div className="main-button" onClick={() => clickOnButton('link-PDFtoExcel')}>
+                  <div className='main-text-button'>
+                    <img src={IconPDFtoXLSX} alt="Icone PDF para Excel" onLoad='SVGInject(this)'/>
+                    <h3>PDF para Excel</h3>
+                  </div>
+                  <div className='description-button'>
+                    Retire as tabelas do PDF direto para um arquivo Excel em poucos segundos
                   </div>
                 </div>
             </Tilt>
@@ -130,6 +142,7 @@ const MainPage = () =>{
         <Link id='link-compress'to='/ComprimirPDF'></Link>
         <Link id='link-search'to='/PesquisarPDF'></Link>
         <Link id='link-PDFtoJPG'to='/PDFtoJPG'></Link>
+        <Link id='link-PDFtoExcel'to='/PDFtoXLSX'></Link>
 
       </div>
     </React.Fragment>
